@@ -1,0 +1,133 @@
+html {
+  height:100%;
+  width: 100%;
+  background-color: #999;
+  margin:0;
+  padding:0;
+}
+body {
+  height:100%;
+  width: 100%;
+  display: table;
+  margin:0;
+  padding:0;
+}
+
+
+#study-buddy--settings {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#study-buddy--questions {
+  list-style-type: none;
+  list-style-image: none;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
+#study-buddy--questions li {
+  width:100%;
+}
+
+#study-buddy--questions .wrapper {
+  width:50%;
+  display: inline-block;
+}
+
+#study-buddy--questions input {
+  width:100%;
+  font-size: 1.5em;
+  padding:8px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#study-buddy--add-question {
+}
+#study-buddy--switch {
+  background-color:#333;
+}
+
+.button {
+  max-width: 320px;
+  background-color:#44c767;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  color:#fff;
+  font-size:1.5em;
+  padding:16px 32px;
+  margin: 4px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+  display: inline-block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#study-buddy--app {
+  display: table-cell;
+  vertical-align: middle;
+}
+#study-buddy--app p {
+  text-align: center;
+  font-size: 400%;
+}
+#study-buddy--app p  a {
+  text-decoration: none;
+  color: #333;
+  background-color: #999;
+}
+#study-buddy--app p  a.answer {
+  color:#ccc;
+}
+
+.study-buddy--menu-bar {
+  width:100%;
+  background-color: #222;
+  height:40px;
+  display:table;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+
+.study-buddy--menu-bar .inner {
+  display:table-cell;
+  vertical-align:middle;
+}
+.study-buddy--menu-bar .left {
+  text-align: left;
+  float:left;
+  width:50%;
+}
+.study-buddy--menu-bar .right {
+  text-align: right;
+  float:right;
+  width:50%;
+}
+.study-buddy--app-name {
+  color:#ccc;
+  font-size:26px;
+  margin:0;
+  padding:1px 4px;
+  text-transform: uppercase;
+  font-family: "Courier New";
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 480px) {
+  .study-buddy--app-name {
+    font-size:16px;
+  }
+}
+
+#study-buddy--settings-icon {
+  height: 24px;
+  display: block;
+  padding:4px 8px;
+  float: right;
+}
