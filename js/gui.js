@@ -12,40 +12,47 @@ define(function(require) {
 
     draw: function(StudyBuddy, answerTime) {
 
-      var index = -1;
+      if (StudyBuddy.questions.length < 1) {
+        alert("You need to enter a few questions.");
+        return "fail";
+      }
+
+      var index = 0;
       var app = document.getElementById("study-buddy--app");
+      var statusBar = document.getElementById("study-buddy--status-bar");
       var card = document.createElement('p');
       var link = document.createElement('a');
-      var question = document.createTextNode("Begin Test");
+      var question = document.createTextNode(StudyBuddy.questions[index].question);
 
       link.appendChild(question);
       link.setAttribute("href", "#");
       card.appendChild(link);
       app.appendChild(card);
-
+      statusBar.innerHTML = (index + 1) + " of " + StudyBuddy.questions.length;
 
       link.addEventListener("click", function(){
-        if (index == -1) {
-            link.innerHTML = StudyBuddy.questions[++index].question
+
+        link.innerHTML = StudyBuddy.questions[index].answer;
+        link.setAttribute('class', 'answer');
+
+        if (StudyBuddy.questions.length <= ++index) {
+          StudyBuddy.randomize();
+          index = 0;
         }
-        else if (StudyBuddy.questions.length > index ) {
 
-          link.innerHTML = StudyBuddy.questions[index].answer;
-          link.setAttribute('class', 'answer');
+        setTimeout(function() {
+          link.innerHTML = StudyBuddy.questions[index].question;
+          link.removeAttribute('class');
+          statusBar.innerHTML = (index + 1) + " of " + StudyBuddy.questions.length;
+        }, answerTime);
 
-          if  (StudyBuddy.questions.length <= ++index) {
-            StudyBuddy.randomize();
-            index = 0;
-            console.log("End of Questions. Starting over.");
-          }
-
-          setTimeout(function() {
-            link.innerHTML = StudyBuddy.questions[index].question;
-            link.removeAttribute('class');
-          }, answerTime);
-        }
       });
 
+    },
+
+    clear: function() {
+      var app = document.getElementById("study-buddy--app");
+      app.innerHTML = "";
     }
   }
 
