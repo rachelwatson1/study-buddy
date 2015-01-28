@@ -8,14 +8,12 @@ html {
 body {
   height:100%;
   width: 100%;
-  display: table;
   margin:0;
   padding:0;
 }
 
 
 #study-buddy--settings {
-  vertical-align: middle;
   text-align: center;
 }
 
@@ -69,7 +67,6 @@ body {
 }
 
 #study-buddy--app {
-  vertical-align: middle;
 }
 #study-buddy--app p {
   text-align: center;
@@ -87,18 +84,14 @@ body {
 #study-buddy--top-bar {
   height:50px;
   width:100%;
+  position:relative;
   background-color: #222;
-  position: fixed;
-  top:0;
-  left:0;
 }
 
 #study-buddy--status-bar {
   width:100%;
   height:25px;
   background-color: #444;
-  position: fixed;
-  top:50px;
   left:0;
   color:#ccc;
   padding:10px 4px 2px;
@@ -124,7 +117,7 @@ body {
 }
 
 .show {
-  display:table-cell;
+  display:block;
 }
 
 .hide {
