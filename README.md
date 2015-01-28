@@ -1,5 +1,4 @@
 # study-buddy
-Quizz builder.
 
 This app allows you to create a quizz that displays one question at a time in a random order.
 
